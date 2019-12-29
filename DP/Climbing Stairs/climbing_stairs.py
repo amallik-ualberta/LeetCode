@@ -23,7 +23,7 @@ def main():
 
 	n = int(input())
 
-	print((n))
+	print(climbing_stairs(n))
 
 if __name__ == "__main__":
     main()
