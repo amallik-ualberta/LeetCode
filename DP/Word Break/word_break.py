@@ -5,6 +5,15 @@ def word_break(s, wordDict):
 
 		return False;
 
+	max_length = 0
+
+	for a in wordDict:
+
+		if (len(a) > max_length):
+
+			max_length = len(a)
+
+
 	length = len(s)
 
 	table = []
@@ -29,7 +38,9 @@ def word_break(s, wordDict):
 
 			continue;
 
-		for j in range (0, i):
+		a = max(0, i - max_length)
+
+		for j in range (a, i):
 
 			this_string = s[j+1 : i+1]
 
